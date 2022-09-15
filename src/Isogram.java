@@ -5,6 +5,7 @@ public class Isogram {
         System.out.println(isoGram("moOse"));
     }
     public static  boolean isoGram(String str){
-        return str.length()== str.chars().distinct().count();
+       return str.length()== str.toLowerCase().chars().distinct().count();
+
     }
 }
