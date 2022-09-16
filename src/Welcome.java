@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 
 public class Welcome {
     public static void main(String[] args) {
-        System.out.println(greet("czech"));
+     greet("polish");
     }
 
 
@@ -31,8 +31,10 @@ public class Welcome {
         greeting.put("swedish", "Valkommen");
         greeting.put("welsh", "Croeso");
 
+        System.out.println(greeting.get(language));
 
-         return greeting.containsKey(language)?greeting.get(language):greeting.get("english");
+
+        return greeting.containsKey(language)?greeting.get(language):greeting.get("english");
 
 
     }
