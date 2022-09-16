@@ -32,10 +32,7 @@ public class Welcome {
         greeting.put("welsh", "Croeso");
 
 
-         if(greeting.containsKey(language)){
-             return greeting.get(language);
-         }
-         return greeting.get("english");
+         return greeting.containsKey(language)?greeting.get(language):greeting.get("english");
 
 
     }
