@@ -26,6 +26,7 @@ public class Test {
 
         List<String> collect = personList.stream().map(t -> t.adres.town).collect(Collectors.toList());
         System.out.println(collect);
+        // TODO: 20.09.2022
 
     }
 }
