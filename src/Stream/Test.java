@@ -27,6 +27,5 @@ public class Test {
         List<String> collect = personList.stream().map(t -> t.adres.town).collect(Collectors.toList());
         System.out.println(collect);
 
-        List<String> collect1 = personList.stream().filter()
     }
 }
