@@ -24,9 +24,14 @@ public class Test {
         personList.add(grazyna);
         personList.add(mariola);
 
+        //return list of places
         List<String> collect = personList.stream().map(t -> t.adres.town).collect(Collectors.toList());
-        System.out.println(collect);
+        //System.out.println(collect);
         // TODO: 20.09.2022
+        //return list of places withouth repetition
+
+        List<String> collect1 = collect.stream().distinct().collect(Collectors.toList());
+       // System.out.println(collect1);
 
     }
 }
