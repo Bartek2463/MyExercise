@@ -3,6 +3,6 @@ public class EvenOrOdd {
         System.out.println(evenOrOdd(2));
     }
     public static  String evenOrOdd(int number){
-        return number%2==0 ?"Even":"Odd";
+        return (number%2==0) ?"Even":"Odd";
     }
 }
