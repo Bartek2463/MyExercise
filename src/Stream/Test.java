@@ -26,12 +26,12 @@ public class Test {
 
         //return list of places
         List<String> collect = personList.stream().map(t -> t.adres.town).collect(Collectors.toList());
-        //System.out.println(collect);
-        // TODO: 20.09.2022
-        //return list of places withouth repetition
 
+
+        //return list of places withouth repetition
         List<String> collect1 = collect.stream().distinct().collect(Collectors.toList());
-       // System.out.println(collect1);
+
+        //return
 
     }
 }
