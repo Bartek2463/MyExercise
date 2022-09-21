@@ -38,7 +38,10 @@ public class Test {
         List<String> collect3 = collect2.stream().distinct().collect(Collectors.toList());
         System.out.println(collect3);
         //retur list name kinder these people
-       personList.stream().filter( r->(r.getAge()>29) &&(r.getAge()<41)).map()
+        List<String> collect4 = personList.stream().filter(year -> year.getAge() > 29 && year.getAge() < 41).flatMap(e -> e.getPersonList().stream())
+                .map(Person::getName).distinct().collect(Collectors.toList());
+        System.out.println(collect4);
+
 
     }
 }
