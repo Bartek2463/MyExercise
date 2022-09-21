@@ -41,6 +41,7 @@ public class Test {
         List<String> collect4 = personList.stream().filter(year -> year.getAge() > 29 && year.getAge() < 41).flatMap(e -> e.getPersonList().stream())
                 .map(Person::getName).distinct().collect(Collectors.toList());
         System.out.println(collect4);
+        //return the number of children
 
 
     }
