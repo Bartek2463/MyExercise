@@ -1,9 +1,6 @@
 package Stream;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Test {
@@ -33,16 +30,14 @@ public class Test {
 
         //return list of places for people aged 30-40;
         List<String> collect2 = personList.stream().filter(year -> (year.getAge() >= 30) && (year.getAge() <= 40)).map(t -> t.adres.town).collect(Collectors.toList());
-        System.out.println(collect2);
+        //System.out.println(collect2);
         // return list of places for people aged no repetitions
         List<String> collect3 = collect2.stream().distinct().collect(Collectors.toList());
-        System.out.println(collect3);
+        //System.out.println(collect3);
         //retur list name kinder these people
         List<String> collect4 = personList.stream().filter(year -> year.getAge() > 29 && year.getAge() < 41).flatMap(e -> e.getPersonList().stream())
                 .map(Person::getName).distinct().collect(Collectors.toList());
-        System.out.println(collect4);
+        //System.out.println(collect4);
         //return the number of children
-
-
     }
 }
