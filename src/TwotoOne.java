@@ -11,7 +11,10 @@ longtest("asdewfghjksdf","qwertyuiokjgf");
         List<String>list = new ArrayList<>();
         list.add(f);
         List<String> collect = list.stream().sorted().distinct().collect(Collectors.toList());
+
+
         System.out.println(collect);
+
 
         return null;
     }
